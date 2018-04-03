@@ -1,0 +1,24 @@
+<div *ngIf="add">
+    <input type="text" [(ngModel)]="english" placeholder="Tiếng Anh">
+    <input type="text" [(ngModel)]="vietnamese" placeholder="Tiếng Việt">
+    <button type="button" (click)="add_word()">Lưu lại</button>
+</div>
+<button type="button" *ngIf="!add" (click)="add = !add">Thêm từ mới</button>
+<div class="filter">
+    <select [(ngModel)]="filter">
+        <option value="all">Tất cả</option>
+        <option value="remember">Đã nhớ</option>
+        <option value="forgot">Chưa nhớ</option>
+    </select>
+</div>
+<ul [ngClass]="'list-word'">
+    <li *ngFor="let arr_word of arr_words">
+        <div *ngIf="filter_word(arr_word.memorized)">
+            <h3 [ngClass]="arr_word.memorized ? 'green' : 'red'">{{ arr_word.en }}</h3>
+            : 
+            <p>{{ arr_word.vi }}</p>
+            <a href="javascript:void(0)" (click)="delete(arr_word.id)">Xóa</a>
+            <a href="javascript:void(0)" (click)="arr_word.memorized = !arr_word.memorized">{{ arr_word.memorized ? 'Chưa nhớ' : 'Đã nhớ' }}</a>
+        </div>
+    </li>
+</ul>

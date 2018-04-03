@@ -1,0 +1,18 @@
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+.list-word li h3, .list-word li p {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+.list-word li a {
+    margin-left: 20px;
+    color: #000;
+}
+.filter {
+    margin: 20px 0 10px;
+}
