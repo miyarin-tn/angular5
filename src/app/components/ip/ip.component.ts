@@ -4,7 +4,8 @@ import { IpService } from '../../services/ip.service';
 @Component({
   selector: 'app-ip',
   templateUrl: './ip.component.html',
-  styleUrls: ['./ip.component.css']
+  styleUrls: ['./ip.component.css'],
+  providers: [IpService]
 })
 export class IpComponent implements OnInit {
 

@@ -4,9 +4,6 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 
-import { IpService } from './services/ip.service';
-
-
 import { AppComponent } from './app.component';
 import { WordComponent } from './components/word/word.component';
 import { PersonComponent } from './components/person/person.component';
@@ -17,6 +14,8 @@ import { ParentsComponent } from './components/parents/parents.component';
 import { ChildsComponent } from './components/childs/childs.component';
 import { CardComponent } from './components/card/card.component';
 import { IpComponent } from './components/ip/ip.component';
+import { WeatherComponent } from './components/weather/weather.component';
+import { SigninComponent } from './components/signin/signin.component';
 
 
 @NgModule({
@@ -30,14 +29,16 @@ import { IpComponent } from './components/ip/ip.component';
     ParentsComponent,
     ChildsComponent,
     CardComponent,
-    IpComponent
+    IpComponent,
+    WeatherComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [IpService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
