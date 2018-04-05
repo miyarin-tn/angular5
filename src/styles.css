@@ -8,3 +8,6 @@ ul li {
 img {
     max-width: 100%;
 }
+input.ng-invalid.ng-touched {
+    border: 2px solid #f00;
+}

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
@@ -16,6 +16,7 @@ import { CardComponent } from './components/card/card.component';
 import { IpComponent } from './components/ip/ip.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 
 @NgModule({
@@ -31,11 +32,13 @@ import { SigninComponent } from './components/signin/signin.component';
     CardComponent,
     IpComponent,
     WeatherComponent,
-    SigninComponent
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule
   ],
   providers: [],
