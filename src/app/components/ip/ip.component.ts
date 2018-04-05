@@ -14,7 +14,7 @@ export class IpComponent implements OnInit {
   constructor(private ip_service: IpService) { }
 
   ngOnInit() {
-    this.ip_service.get_ip()
+    this.ip_service.getIp()
     .then(ip => this.ip = ip)
     .catch(err => console.log(err));
   }

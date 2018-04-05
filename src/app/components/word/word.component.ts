@@ -19,7 +19,7 @@ export class WordComponent implements OnInit {
     { id: 5, en: 'bath', vi: 'tắm', memorized: false },
     { id: 6, en: 'bedroom', vi: 'phòng ngủ', memorized: true }
   ];
-  add_word() {
+  addWord() {
     if(this.add) {
       if(this.english !== '' && this.vietnamese !== '') {
         this.arr_words.unshift({
@@ -41,7 +41,7 @@ export class WordComponent implements OnInit {
     const index = this.arr_words.findIndex(word => word.id === id);
     this.arr_words.splice(index, 1);
   }
-  filter_word(memorized: boolean) {
+  filterWord(memorized: boolean) {
     const all = this.filter === 'all';
     const remember = this.filter === 'remember' && memorized;
     const forgot = this.filter === 'forgot' && !memorized;

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponent implements OnInit {
 
   value = 0;
-  change_value(is_add: boolean) {
+  changeValue(is_add: boolean) {
     if(is_add) {
       this.value = this.value + 1;
     }

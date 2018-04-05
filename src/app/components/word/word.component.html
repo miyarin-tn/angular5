@@ -1,7 +1,7 @@
 <div *ngIf="add">
     <input type="text" [(ngModel)]="english" placeholder="Tiếng Anh">
     <input type="text" [(ngModel)]="vietnamese" placeholder="Tiếng Việt">
-    <button type="button" (click)="add_word()">Lưu lại</button>
+    <button type="button" (click)="addWord()">Lưu lại</button>
 </div>
 <button type="button" *ngIf="!add" (click)="add = !add">Thêm từ mới</button>
 <div class="filter">
@@ -13,7 +13,7 @@
 </div>
 <ul [ngClass]="'list-word'">
     <li *ngFor="let arr_word of arr_words">
-        <div *ngIf="filter_word(arr_word.memorized)">
+        <div *ngIf="filterWord(arr_word.memorized)">
             <h3 [ngClass]="arr_word.memorized ? 'green' : 'red'">{{ arr_word.en }}</h3>
             : 
             <p>{{ arr_word.vi }}</p>

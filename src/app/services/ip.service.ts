@@ -7,7 +7,7 @@ export class IpService {
 
   constructor(private http: Http) { }
 
-  get_ip() {
+  getIp() {
     return this.http.get('http://ip.jsontest.com')
     .toPromise()
     .then(res => res.json())

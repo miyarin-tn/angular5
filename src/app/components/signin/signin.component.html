@@ -1,12 +1,21 @@
-<form (ngSubmit)="on_submit(formSignIn)" #formSignIn="ngForm">
+<form (ngSubmit)="onSubmit(formSignIn)" #formSignIn="ngForm">
   <input type="text" name="email" ngModel #txtEmail="ngModel" name="email" placeholder="Email" required email>
   <p *ngIf="txtEmail.touched && txtEmail.errors?.required">Email is required</p>
   <p *ngIf="txtEmail.touched && txtEmail.errors?.email">Email is not valid</p>
   <br>
   <br>
-  <input type="password" name="password" [(ngModel)]="password" placeholder="Password">
+  <input type="password" name="password" ngModel #txtPassword="ngModel" placeholder="Password" minlength="8" pattern="[a-z]*">
+  <br>
+  <br>
+  <div ngModelGroup="subjects">
+    <label><input type="checkbox" [ngModel]="false" name="NodeJS">Football</label>
+    <label><input type="checkbox" [ngModel]="false" name="Angular">Football</label>
+    <label><input type="checkbox" [ngModel]="false" name="ReactJS">Football</label>
+  </div>
   <br>
   <br>
   <button [disabled]="formSignIn.invalid">Submit</button>
-  <p>{{ txtEmail.errors | json }}</p>
 </form>
+<p>{{ txtEmail.errors | json }}</p>
+<p>{{ txtPassword.errors | json }}</p>
+<p>{{ formSignIn.value | json }}</p>

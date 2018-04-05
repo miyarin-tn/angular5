@@ -10,7 +10,7 @@ export class ParentsComponent implements OnInit {
 
   @ViewChild(ChildsComponent)
   myChild: ChildsComponent;
-  add_child() {
+  addChild() {
     this.myChild.value++;
   }
 

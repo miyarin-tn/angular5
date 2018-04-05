@@ -18,8 +18,8 @@ export class WeatherComponent implements OnInit {
   ngOnInit() {
   }
 
-  get_temperature() {
-    this.weather_service.get_weather(this.txt_city)
+  getTemperature() {
+    this.weather_service.getWeather(this.txt_city)
     .then(temp => {
       this.city = this.txt_city;
       this.temp = temp;
