@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { RoutingModule } from './modules/routing/routing.module'
 
 
 import { AppComponent } from './app.component';
@@ -39,7 +40,8 @@ import { SignupComponent } from './components/signup/signup.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
