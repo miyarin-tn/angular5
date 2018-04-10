@@ -18,6 +18,7 @@ import { IpComponent } from './components/ip/ip.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { PathLocationComponent } from './components/path-location/path-location.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SignupComponent } from './components/signup/signup.component';
     IpComponent,
     WeatherComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    PathLocationComponent
   ],
   imports: [
     BrowserModule,
